@@ -3,8 +3,8 @@
 from os.path import dirname
 import os
 
-mainLocation = os.path.dirname(os.getcwd())+"/BlueWave/web/"
-newLocation = os.path.dirname(os.getcwd())+"/BlueWave/compiledProjectDirectory/"
+mainLocation = os.path.dirname(os.getcwd())+"/web/"
+newLocation = os.path.dirname(os.getcwd())+"/compiledProjectDirectory/"
 
 print("printing the current directories")
 print(os.getcwd())
