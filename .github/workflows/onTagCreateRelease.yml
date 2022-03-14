@@ -110,6 +110,9 @@ jobs:
       - name: locate editMainHTML file
         run: find . -name editMainHtmlFile.py
 
+      - name: locate main.html file
+        run: find . -name main.html
+
       - name: print everything
         run: dir -r
 
