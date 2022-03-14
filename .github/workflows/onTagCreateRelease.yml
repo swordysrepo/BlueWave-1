@@ -177,6 +177,10 @@ jobs:
       - name : log compiled project dir
         run: dir compiledProjectDirectory
 
+      # log compiledProjectDirectory scripts
+      - name : log compiled project dir scripts
+        run: dir compiledProjectDirectory/scripts
+
      # Package new directory into zip file
       - name: add minified project to a zip
         uses: papeloto/action-zip@v1
