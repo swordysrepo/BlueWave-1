@@ -165,14 +165,12 @@ jobs:
 
       # copy remaining files from scripts directory -> release directory
       - name: copy project-dependent python scripts to release directory
-        run: |
-        cp -r scripts compiledProjectDirectory
+        run: cp -r scripts compiledProjectDirectory
 
 
       # delete python directories that should not be included in release version
       - name: delete github workflows directory (do not include in release)
-        run: |
-        rm -f -r compiledProjectDirectory/scripts/githubWorkflowActions
+        run: rm -f -r compiledProjectDirectory/scripts/githubWorkflowActions
 
       # log compiledProjectDirectory
       - name : log compiled project dir
