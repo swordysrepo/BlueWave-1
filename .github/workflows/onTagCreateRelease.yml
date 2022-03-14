@@ -107,6 +107,8 @@ jobs:
       #   with:
       #     path: "scripts/githubWorkflowActions/requirements.txt"
 
+      - name: locate editMainHTML file
+        run: find . -name editMainHtmlFile.py
 
       - name: print everything
         run: dir -r
