@@ -166,7 +166,7 @@ jobs:
       # delete python directories that should not be included in release version
       - name: delete github workflows directory (do not include in release)
         run: |
-        remove scripts/githubWorkflowActions
+        rm -f scripts/githubWorkflowActions
 
       # copy remaining files from scripts directory -> release directory
       - name: copy project-dependent python scripts to release directory
