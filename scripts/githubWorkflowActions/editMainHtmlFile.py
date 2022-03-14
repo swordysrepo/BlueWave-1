@@ -9,7 +9,7 @@ newLocation = os.path.dirname(os.getcwd())+"/BlueWave-1/compiledProjectDirectory
 print("printing the current directories")
 print(os.getcwd())
 
-itemsToRemove = [
+itemsToRemove = [ # udpate this to include new SRC locations to be removes when all of web directory is recompiled
 'src="app',
 "<!-- Admin Modules -->",
  "<!-- Graph Stuff -->",
