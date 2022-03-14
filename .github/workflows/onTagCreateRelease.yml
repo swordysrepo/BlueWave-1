@@ -182,14 +182,17 @@ jobs:
         run: dir compiledProjectDirectory/scripts
 
      # Package new directory into zip file
-      - name: add minified project to a zip
-        uses: papeloto/action-zip@v1
-        with:
-          files: ./compiledProjectDirectory
+      # - name: add minified project to a zip
+      #   uses: papeloto/action-zip@v1
+      #   with:
+      #     files: ./compiledProjectDirectory
 
-          recursive: true
-          dest: bluewave-${{ env.tagName }}.zip
+      #     recursive: true
+      #     dest: bluewave-${{ env.tagName }}.zip
 
+      # alternate zipping method
+      - name: zip configured project directory into .zip
+        run: zip -r bluewave-${{ env.tagName }}.zip ./compiledProjectDirectory
 
 
      # create the release to serve as a place to export to
