@@ -6,6 +6,9 @@ import os
 mainLocation = os.path.dirname(os.getcwd())+"/BlueWave/web/"
 newLocation = os.path.dirname(os.getcwd())+"/BlueWave/compiledProjectDirectory/"
 
+print("printing the current directories")
+print(os.getcwd())
+
 itemsToRemove = [
 'src="app',
 "<!-- Admin Modules -->",
