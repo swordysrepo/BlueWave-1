@@ -7,7 +7,7 @@ mainLocation = os.path.dirname(os.getcwd())+"/BlueWave/web/"
 newLocation = os.path.dirname(os.getcwd())+"/BlueWave/compiledProjectDirectory/"
 
 itemsToRemove = [
-'src="app', 
+'src="app',
 "<!-- Admin Modules -->",
  "<!-- Graph Stuff -->",
   "<!-- Misc -->",
@@ -15,9 +15,9 @@ itemsToRemove = [
  "<!-- Dashboards -->"
  ]
 
-with open(mainLocation + "/main.html", "r") as f:
+with open(mainLocation + "main.html", "r") as f:
     lines = f.readlines()
-with open(newLocation + "/web/main.html", "w") as f:
+with open(newLocation + "web/main.html", "w") as f:
     for line in lines:
         writeLine = True
         for removeWord in itemsToRemove:
@@ -34,7 +34,7 @@ with open(newLocation + "/web/main.html", "w") as f:
 
         # add the BlueWave file reference just below the kartographia reference
         if '<script src="lib/kartographia/kartographia.js" type="text/javascript"></script>' in line:
-            
+
             f.write('\n\n<!-- BlueWave-->\n')
             f.write('<script src="bluewave.js" type="text/javascript"></script>\n')
 
