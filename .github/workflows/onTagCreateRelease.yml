@@ -192,7 +192,7 @@ jobs:
 
       # alternate zipping method
       - name: zip configured project directory into .zip
-        run: zip -r bluewave-${{ env.tagName }}.zip ./compiledProjectDirectory/
+        run: cd compiledProjectDirectory; zip -r ../bluewave-${{ env.tagName }}.zip *
 
 
      # create the release to serve as a place to export to
